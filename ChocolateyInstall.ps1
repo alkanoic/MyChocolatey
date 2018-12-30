@@ -4,8 +4,11 @@ Set-ExecutionPolicy RemoteSigned
 # Chocolateyインストール
 iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
+# configから一括インストール
+cinst chocolateymyapp.config -y
+
 # 単体インストール
-cinst chocolateygui
+# cinst chocolateygui -y
 # cinst 7zip.install
 # cinst git.install
 # cinst googlechrome
@@ -21,5 +24,3 @@ cinst chocolateygui
 # cinst vnc-viewer
 # cinst azure-cli
 
-# configから一括インストール
-cinst chocolateymyapp.config
